@@ -1,29 +1,9 @@
-###################
-What is CodeIgniter
-###################
+#######################
+CODEIGNITER BASIC SETUP
+#######################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
-
-*******************
-Release Information
-*******************
-
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
-
-**************************
-Changelog and New Features
-**************************
-
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+This setup contains the base CodeIgniter setup (minus the user guide). It contains user creation,
+basic authentication, sessions, password hashing and verification, endpoints generating endpoints, and sample login/user views.
 
 *******************
 Server Requirements
@@ -31,7 +11,7 @@ Server Requirements
 
 PHP version 5.6 or newer is recommended.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
+It SHOULD work on 5.3.7 as well, but we strongly advise you NOT to run
 such old versions of PHP, because of potential security and performance
 issues, as well as missing features.
 
@@ -39,32 +19,25 @@ issues, as well as missing features.
 Installation
 ************
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+1.) Setup a database
 
-*******
-License
-*******
+2.) Create a table in the database named "User" with the fields:
+ ("id", varchar(255), PK), ("email", varchar(255)), ("hash", varchar(255))
+ ("firstName", varchar(255)), ("lastName", varchar(255)),
+ ("role", varchar(255)), ("status", varchar(255)), ("dateTimeCreated", timestamp)
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+3.) Configure the database file by going to /application/config/database.php
+4.) Adjust config by going to /application/config/config.php
+5.) Your site should now be installed.
 
-*********
-Resources
-*********
+*****
+Usage
+*****
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community IRC <https://webchat.freenode.net/?channels=%23codeigniter>`_
+Visit <domain>/accounts/register to create a user.
+Visit <domain>/accounts/login to login and access user page.
+Visit <domain>/users to view users
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+GET request to <domain>/users/all returns JSON containing all users
 
-***************
-Acknowledgement
-***************
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
