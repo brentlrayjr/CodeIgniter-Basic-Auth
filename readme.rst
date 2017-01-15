@@ -21,13 +21,21 @@ Installation
 
 1.) Setup a database
 
-2.) Create a table in the database named "User" with the fields:
- ("id", varchar(255), PK), ("email", varchar(255)), ("hash", varchar(255))
- ("firstName", varchar(255)), ("lastName", varchar(255)),
- ("role", varchar(255)), ("status", varchar(255)), ("dateTimeCreated", timestamp)
+2.) Create a table in the database named "User" with the following fields
+
+ ("id", varchar(255), PK)
+ ("email", varchar(255))
+ ("hash", varchar(255))
+ ("firstName", varchar(255))
+ ("lastName", varchar(255))
+ ("role", varchar(255))
+ ("status", varchar(255))
+ ("dateTimeCreated", timestamp)
 
 3.) Configure the database file by going to /application/config/database.php
+
 4.) Adjust config by going to /application/config/config.php
+
 5.) Your site should now be installed.
 
 *****
@@ -38,6 +46,6 @@ Visit <domain>/accounts/register to create a user.
 Visit <domain>/accounts/login to login and access user page.
 Visit <domain>/users to view users
 
-GET request to <domain>/users/all returns JSON containing all users
+GET requests to <domain>/users/all returns JSON containing all users
 
 
