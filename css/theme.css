@@ -1,0 +1,41 @@
+body{
+
+  height: 100%;
+
+}
+
+ .vert-spacer-lg {
+
+   width: auto;
+   height: 250px;
+
+
+ }
+
+ .error {
+
+   color: red;
+
+ }
+
+ .center {
+
+   text-align: center;
+
+ }
+
+ .vert-spacer-md {
+
+   width: auto;
+   height: 150px;
+
+
+ }
+
+ .vert-spacer-sm {
+
+   width: auto;
+   height: 50px;
+
+
+ }
